@@ -1,0 +1,80 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+button {
+  padding: 0.25em 0.5em;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.players-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
+
+.player-list {
+  list-style: none;
+  width: 100%;
+  border: 2px solid black;
+  margin: 1em 0;
+}
+
+.container {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.heading1 {
+  padding: 1em;
+}
+
+.recent-scores,
+.add-scores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 2em;
+}
+
+.recent-score-header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.player-item {
+  padding: 0.5em;
+}
+
+.player-item:nth-child(even) {
+  background-color: rgb(145, 145, 145);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+}
+
+form > input {
+  margin: 1em 0;
+  padding: 0.5em;
+}
+
+form > button {
+  margin: 1em 0;
+  align-self: flex-end;
+}
