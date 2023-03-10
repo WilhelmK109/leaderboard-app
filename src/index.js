@@ -43,8 +43,6 @@ window.addEventListener('load', async () => {
       });
       inputName.value = '';
       inputScore.value = '';
-      // const response = await axios.get(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`);
-      // const scores = response.data.result;
     } catch (error) {
       // Handle the error
     }
