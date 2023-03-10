@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import './style.css';
 
 let gameId = 'Ny7Ttc30wM2KhPKVHTkh';
@@ -21,17 +20,14 @@ const displayPlayers = (players) => {
   });
 };
 
-window.addEventListener('load', () => {
-  const refreshBtn = document.getElementById('refresh-btn');
-  refreshBtn.addEventListener('click', async () => {
-    try {
-      const response = await axios.get(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`);
-      const scores = response.data.result;
-      displayPlayers(scores);
-    } catch (error) {
-      // console.error(error);
-    }
-  });
+window.addEventListener('load', async () => {
+  try {
+    const response = await axios.get(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`);
+    const scores = response.data.result;
+    displayPlayers(scores);
+  } catch (error) {
+    // Handle the error
+  }
 
   const submitBtn = document.getElementById('submit-btn');
   submitBtn.addEventListener('click', async (e) => {
@@ -47,9 +43,21 @@ window.addEventListener('load', () => {
       });
       inputName.value = '';
       inputScore.value = '';
-      refreshBtn.click();
+      // const response = await axios.get(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`);
+      // const scores = response.data.result;
     } catch (error) {
-    // console.error(error);
+      // Handle the error
+    }
+  });
+
+  const refreshBtn = document.getElementById('refresh-btn');
+  refreshBtn.addEventListener('click', async () => {
+    try {
+      const response = await axios.get(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${gameId}/scores/`);
+      const scores = response.data.result;
+      displayPlayers(scores);
+    } catch (error) {
+      // Handle the error
     }
   });
 });
