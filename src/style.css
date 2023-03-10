@@ -1,51 +1,67 @@
+/* Universal styling */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Lato", sans-serif;
 }
 
 button {
-  padding: 0.25em 0.5em;
+  padding: 10px;
+  background-color: #3b4cca;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
+form > button {
+  margin: 1em 0;
+  align-self: flex-end;
+}
+
+button:hover {
+  background-color: #2a3daa;
+}
+
 body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
   width: 100vw;
-  height: 100vh;
+  height: auto;
 }
 
 .players-section {
   width: 100%;
   display: flex;
+  background-color: #f5f5f5;
   flex-direction: column;
   justify-content: center;
   justify-items: center;
   align-items: center;
 }
 
-.player-list {
-  list-style: none;
-  width: 100%;
-  border: 2px solid black;
-  margin: 1em 0;
-}
-
+/* Container */
 .container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
   display: flex;
   justify-items: center;
-  align-items: center;
 }
 
+/* Heading */
 .heading1 {
-  padding: 1em;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  margin-left: -23%;
+  margin-top: 20px;
 }
 
-.recent-scores,
-.add-scores {
+/* Recent scores */
+.recent-scores {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin: 1em 2em;
 }
@@ -53,7 +69,19 @@ body {
 .recent-score-header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.recent-score-header h3 {
+  font-size: 1.5rem;
+}
+
+/* Player list */
+.player-list {
+  list-style: none;
   width: 100%;
+  border: 2px solid black;
+  margin: 1em 0;
 }
 
 .player-item {
@@ -73,9 +101,4 @@ form {
 form > input {
   margin: 1em 0;
   padding: 0.5em;
-}
-
-form > button {
-  margin: 1em 0;
-  align-self: flex-end;
 }
